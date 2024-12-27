@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Form Fixer",
+  "short_name": "Fixer",
+  "version": "1.0",
+  "description": "A simple browser extension that adds name attribute to every form for better autofill compatibility.",
+  "icons": {
+    "192": "icons/web-app-manifest-192x192.png",
+    "512": "icons/web-app-manifest-512x512.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
